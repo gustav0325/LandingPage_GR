@@ -143,11 +143,9 @@ export default function Home() {
       if (data.success) {
         setFormStatus("success");
         e.target.reset();
-        // A MENSAGEM SOME APÓS 5 SEGUNDOS
         setTimeout(() => setFormStatus(""), 5000);
       } else {
         setFormStatus("error");
-        // O ERRO TAMBÉM SOME APÓS 5 SEGUNDOS
         setTimeout(() => setFormStatus(""), 5000);
       }
     } catch (error) {
