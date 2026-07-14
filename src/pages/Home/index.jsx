@@ -15,10 +15,10 @@ import servico2 from "../../assets/servico2.jpg";
 import servico3 from "../../assets/servico3.jpg";
 import servico4 from "../../assets/servico4.jpg";
 
-import miniServico1 from "../../assets/servico1.jpg"; 
-import miniServico2 from "../../assets/servico2.jpg";
-import miniServico3 from "../../assets/servico3.jpg";
-import miniServico4 from "../../assets/servico4.jpg";
+import miniServico1 from "../../assets/outros1.jpg"; 
+import miniServico2 from "../../assets/outros2.jpg";
+import miniServico3 from "../../assets/outros3.jpg";
+import miniServico4 from "../../assets/outros4.jpg";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
