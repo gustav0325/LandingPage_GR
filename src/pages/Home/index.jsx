@@ -157,8 +157,14 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen bg-gr-dark text-white font-inter overflow-x-hidden">
       
-      {/* Header Unificado — Suporte a Glassmorphism Contínuo com Blur */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-black/5 px-6 md:px-16" style={{ WebkitBackdropFilter: "blur(16px)" }}>
+      {/* Header Unificado — Vidro Claro Perfeito, Contínuo e com Alto Desfoque */}
+      <header 
+        className="fixed top-0 left-0 w-full z-50 bg-white/20 border-b border-white/10 px-6 md:px-16 transition-all duration-300" 
+        style={{ 
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)" // Garante o efeito "glass" translúcido no Safari do iPhone
+        }}
+      >
         <div className="max-w-7xl h-24 mx-auto flex items-center justify-between">
           
           <a href="#home" className="flex items-center focus:outline-none">
@@ -208,7 +214,7 @@ export default function Home() {
 
         </div>
 
-        {/* Menu Mobile - Extensão física e contínua do cabeçalho sem quebras */}
+        {/* Menu Mobile - Extensão contínua do vidro claro com letras pretas de alto contraste */}
         {isMenuOpen && (
           <div className="w-full pb-8 flex flex-col gap-6 md:hidden animate-fadeIn">
             <nav className="flex flex-col gap-5 text-base font-bold tracking-widest text-black pt-4 border-t border-black/5">
