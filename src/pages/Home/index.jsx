@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import logoGR from "../../assets/logocorreta.png";
+import logoGR from "../../assets/logogresq.png";
 import salaoObraImg from "../../assets/salaoOBRA.jpeg";
 import construcaoImg from "../../assets/construcao.jpg";  
 import fechamentoImg from "../../assets/fechamento.jpg"; 
@@ -207,20 +207,21 @@ export default function Home() {
 
         </div>
 
+        {/* Menu Mobile - Estilizado com Vidro Fosco (Glassmorphism) e letras pretas */}
         {isMenuOpen && (
-          <div className="absolute top-24 left-0 w-full bg-gr-dark/95 backdrop-blur-lg border-b border-white/10 px-6 py-8 flex flex-col gap-6 md:hidden">
-            <nav className="flex flex-col gap-5 text-base font-medium tracking-wide text-white">
-              <a href="#home" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition">INÍCIO</a>
-              <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition">SOBRE</a>
-              <a href="#services" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition">SERVIÇOS</a>
-              <a href="#our-work" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition">PROJETOS</a>
+          <div className="absolute top-24 left-0 w-full bg-white/70 backdrop-blur-md border-b border-black/10 px-6 py-8 flex flex-col gap-6 md:hidden z-50">
+            <nav className="flex flex-col gap-5 text-base font-bold tracking-widest text-black">
+              <a href="#home" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">INÍCIO</a>
+              <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">SOBRE</a>
+              <a href="#services" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">SERVIÇOS</a>
+              <a href="#our-work" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">PROJETOS</a>
             </nav>
             <a 
               href="https://wa.me/5511943977964?text=Ol%C3%A1%20preciso%20de%20um%20or%C3%A7amento"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
-              className="w-full text-center bg-white text-gr-dark font-bold text-sm py-3 rounded-lg block"
+              className="w-full text-center bg-black text-[#FBF8F3] hover:bg-[#042D22] hover:text-white font-bold text-sm py-3 rounded-lg block transition-all duration-300"
             >
               SOLICITAR ORÇAMENTO
             </a>
@@ -663,6 +664,19 @@ export default function Home() {
 
         </div>
       </footer>
+
+      {/* Botão Flutuante do WhatsApp com efeito Glow e Gradiente Verde - Visível apenas no Mobile */}
+      <a 
+        href="https://wa.me/5511943977964?text=Ol%C3%A1%20preciso%20de%20um%20or%C3%A7amento"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="md:hidden fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(37,211,102,0.4)] hover:shadow-[0_8px_32px_rgba(37,211,102,0.6)] active:scale-90 transition-all duration-300"
+        aria-label="Fale conosco no WhatsApp"
+      >
+        <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.256 5.259 0 11.722 0c3.13 0 6.073 1.22 8.283 3.432s3.43 5.154 3.43 8.287c-.004 6.463-5.26 11.72-11.722 11.72-1.996-.001-3.956-.508-5.702-1.472L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.747 1.451 5.377 0 9.754-4.374 9.758-9.742.002-2.6-1.013-5.044-2.859-6.89C16.4 2.128 13.956.996 11.723.996 6.347.996 1.97 5.37 1.966 10.738c-.001 1.637.473 3.23 1.411 4.616l-.99 3.613 3.705-.971c1.385.753 2.924 1.156 4.515 1.158zm7.425-5.26c-.19-.094-1.127-.556-1.301-.62-.175-.063-.302-.095-.43.094-.126.19-.49.62-.601.746-.11.127-.221.143-.411.048-.19-.095-.8-.294-1.523-.94-.563-.502-.942-1.122-1.053-1.312-.11-.19-.012-.293.083-.388.086-.085.19-.221.285-.332.095-.11.127-.19.19-.317.063-.127.032-.238-.016-.332-.047-.095-.43-1.03-.589-1.412-.155-.373-.325-.323-.43-.328l-.367-.006c-.127 0-.332.048-.507.238-.174.19-.665.65-.665 1.585 0 .935.68 1.838.775 1.965.095.127 1.338 2.042 3.24 2.863.453.195.806.312 1.082.399.455.144.868.124 1.196.075.365-.055 1.127-.46 1.285-.904.159-.444.159-.824.111-.904-.048-.079-.174-.127-.365-.221z"/>
+        </svg>
+      </a>
 
     </div>
   );
