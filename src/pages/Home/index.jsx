@@ -207,24 +207,16 @@ export default function Home() {
 
         </div>
 
-        {/* Menu Mobile - Estilizado com Vidro Fosco (Glassmorphism) e letras pretas */}
+        {/* Menu Mobile - Idêntico ao estilo da Nav Bar (fundo e texto) */}
         {isMenuOpen && (
-          <div className="absolute top-24 left-0 w-full bg-white/70 backdrop-blur-md border-b border-black/10 px-6 py-8 flex flex-col gap-6 md:hidden z-50">
-            <nav className="flex flex-col gap-5 text-base font-bold tracking-widest text-black">
+          <div className="absolute top-24 left-0 w-full bg-white/5 backdrop-blur-md border-b border-white/10 px-6 py-8 flex flex-col gap-6 md:hidden z-50">
+            <nav className="flex flex-col gap-5 text-base font-bold tracking-widest text-white">
               <a href="#home" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">INÍCIO</a>
               <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">SOBRE</a>
               <a href="#services" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">SERVIÇOS</a>
               <a href="#our-work" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">PROJETOS</a>
             </nav>
-            <a 
-              href="https://wa.me/5511943977964?text=Ol%C3%A1%20preciso%20de%20um%20or%C3%A7amento"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsMenuOpen(false)}
-              className="w-full text-center bg-black text-[#FBF8F3] hover:bg-[#042D22] hover:text-white font-bold text-sm py-3 rounded-lg block transition-all duration-300"
-            >
-              SOLICITAR ORÇAMENTO
-            </a>
+           
           </div>
         )}
       </header>
