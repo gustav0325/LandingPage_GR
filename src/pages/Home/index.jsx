@@ -217,15 +217,6 @@ export default function Home() {
               <a href="#services" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">SERVIÇOS</a>
               <a href="#our-work" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">PROJETOS</a>
             </nav>
-            <a 
-              href="https://wa.me/5511943977964?text=Ol%C3%A1%20preciso%20de%20um%20or%C3%A7amento"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsMenuOpen(false)}
-              className="w-full text-center bg-black text-[#FBF8F3] hover:bg-[#042D22] hover:text-white font-bold text-sm py-3 rounded-lg block transition-all duration-300"
-            >
-              SOLICITAR ORÇAMENTO
-            </a>
           </div>
         )}
       </header>
