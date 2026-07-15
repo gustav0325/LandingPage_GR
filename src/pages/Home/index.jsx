@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import logoGR from "../../assets/logogresq.png";
+import logoGR from "../../assets/logocorreta.png";
 import salaoObraImg from "../../assets/salaoOBRA.jpeg";
 import construcaoImg from "../../assets/construcao.jpg";  
 import fechamentoImg from "../../assets/fechamento.jpg"; 
