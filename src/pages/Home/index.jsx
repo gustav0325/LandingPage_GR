@@ -157,8 +157,9 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen bg-gr-dark text-white font-inter overflow-x-hidden">
       
-      <header className="fixed top-0 left-0 w-full h-24 z-50 bg-white/5 backdrop-blur-md border-b border-white/10 px-6 md:px-16">
-        <div className="max-w-7xl h-full mx-auto flex items-center justify-between">
+      {/* Header Unificado — Suporte a Glassmorphism Contínuo com Blur */}
+      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-black/5 px-6 md:px-16" style={{ WebkitBackdropFilter: "blur(16px)" }}>
+        <div className="max-w-7xl h-24 mx-auto flex items-center justify-between">
           
           <a href="#home" className="flex items-center focus:outline-none">
             <img 
@@ -207,16 +208,24 @@ export default function Home() {
 
         </div>
 
-        {/* Menu Mobile - Idêntico ao estilo da Nav Bar (fundo e texto) */}
+        {/* Menu Mobile - Extensão física e contínua do cabeçalho sem quebras */}
         {isMenuOpen && (
-          <div className="absolute top-24 left-0 w-full bg-white/5 backdrop-blur-md border-b border-white/10 px-6 py-8 flex flex-col gap-6 md:hidden z-50">
-            <nav className="flex flex-col gap-5 text-base font-bold tracking-widest text-white">
+          <div className="w-full pb-8 flex flex-col gap-6 md:hidden animate-fadeIn">
+            <nav className="flex flex-col gap-5 text-base font-bold tracking-widest text-black pt-4 border-t border-black/5">
               <a href="#home" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">INÍCIO</a>
               <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">SOBRE</a>
               <a href="#services" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">SERVIÇOS</a>
               <a href="#our-work" onClick={() => setIsMenuOpen(false)} className="hover:text-gr-gold transition-colors duration-200">PROJETOS</a>
             </nav>
-           
+            <a 
+              href="https://wa.me/5511943977964?text=Ol%C3%A1%20preciso%20de%20um%20or%C3%A7amento"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+              className="w-full text-center bg-black text-[#FBF8F3] hover:bg-[#042D22] hover:text-white font-bold text-sm py-3 rounded-lg block transition-all duration-300"
+            >
+              SOLICITAR ORÇAMENTO
+            </a>
           </div>
         )}
       </header>
